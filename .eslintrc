@@ -1,0 +1,71 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true,
+            "destructuring": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "settings": {
+        "import/parsers": {
+            "@typescript-eslint/parser": [
+                ".ts",
+                ".tsx",
+                ".js"
+            ]
+        },
+        "import/resolver": {
+            "typescript": {
+                "project": "./tsconfig.json"
+            }
+        },
+        "react": {
+            "fragment": "Fragment",
+            "version": "detect"
+        }
+    },
+    "globals": {
+        "cordova": false
+    },
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react-hooks/recommended",
+        "prettier",
+    ],
+    "plugins": [
+        "@typescript-eslint",
+        "prettier",
+        "simple-import-sort"
+    ],
+    "rules": {
+        // "no-console": 0,
+        "prettier/prettier": "error",
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error",
+        "no-use-before-define": "off",
+        "react/jsx-filename-extension": "off",
+        "semi": "error",
+        "@typescript-eslint/no-use-before-define": "off",
+        "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/no-extra-semi": "error",
+        "@typescript-eslint/no-empty-function": "off",
+        "no-bitwise": "off",
+        "no-multi-assign": "warn",
+        "no-unused-vars": "off",
+        "no-prototype-builtins": "warn",
+        "babel/camelcase": "off",
+        "react/display-name": "off",
+        "no-nested-ternary": "off",
+        "react/no-unescaped-entities": "off",
+        //*.stories.tsx devDependencies 를 import 할 수 있도록 설정
+        "import/no-extraneous-dependencies": "off",
+        "no-undef": "off",
+        "@typescript-eslint/no-unused-vars": "warn"
+    }
+}

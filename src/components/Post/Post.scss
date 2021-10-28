@@ -1,0 +1,111 @@
+@import '../../utils/variables';
+@import '../../utils/mixins';
+
+.post {
+    background-color: $component-background;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 0px 5px 7px -7px $box-shadow;
+    margin: 0.8rem;
+
+    .top {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 12px 16px 16px 12px;
+
+        .info {
+            margin-left: 0.25rem;
+            display: flex;
+            flex-direction: column;
+            direction: ltr;
+            flex-grow: 1;
+
+            .name {
+                margin-top: 4px;
+                > h4 > strong > span {
+                    font-size: 15px;
+                    color: var(--primary-text);
+                }
+            }
+            .date {
+                font-size: 13px;
+                font-weight: 400;
+                color: var(--secondary-text);
+            }
+        }
+        .threedot {
+            width: 1.25rem;
+            height: 1.25rem;
+            padding: 0.5rem;
+            > svg {
+                width: 1.25rem;
+                height: 1.25rem;
+                fill: var(--secondary-icon);
+            }
+        }
+    }
+
+    .text {
+        display: flex;
+        padding: 0.25rem 1rem 1rem 1rem;
+        > span {
+            font-size: 0.9375rem;
+            font-weight: 400;
+            line-height: 1.25rem;
+            flex-wrap: wrap;
+            word-break: break-all;
+            word-wrap: break-word;
+        }
+    }
+
+    .image {
+        img {
+            width: 100%;
+            max-height: 31.25rem;
+            object-fit: cover;
+            display: block;
+        }
+    }
+}
+
+.bottomAction {
+    padding: 0.3rem 0.3rem 0;
+    border-top: 1px solid $border-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .action {
+        transition: linear 200ms;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        padding: 0.5rem 1rem;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            background-color: $button-hover;
+            transform: translateY(-2px);
+            border-radius: 0.3rem;
+        }
+
+        h4 {
+            color: $comment-text;
+            margin-left: 0.5rem;
+
+            @include for-small-screens {
+                display: none;
+            }
+        }
+
+        .postAction {
+            margin: 0 0.5rem;
+            color: $icon;
+        }
+    }
+}

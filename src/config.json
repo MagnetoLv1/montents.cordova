@@ -1,0 +1,11 @@
+{
+    "firebase":{        
+        "apiKey": "AIzaSyBM_wKB_LYG2bdF-iFYaIaFHNcgetNCFPI",
+        "authDomain": "apiviewer.firebaseapp.com",
+        "databaseURL": "https://apiviewer.firebaseio.com",
+        "projectId": "apiviewer",
+        "storageBucket": "apiviewer.appspot.com",
+        "messagingSenderId": "293629322300",
+        "appId": "1:293629322300:web:38277b4c7d3a85d6b78f39"
+    }
+}

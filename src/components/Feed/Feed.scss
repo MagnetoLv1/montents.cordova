@@ -1,0 +1,17 @@
+@import '../../utils/variables';
+@import '../../utils/mixins';
+
+.feed {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.35rem;
+    height: 100vh;
+    max-width: 600px;
+
+    @include for-small-screens {
+        overflow-x: hidden;
+    }
+}
